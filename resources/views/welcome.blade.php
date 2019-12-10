@@ -14,7 +14,6 @@
     <body>
         <div class="flex-center position-ref full-height">
             <div class="content">
-                
             </div>
         </div>
     </body>
@@ -24,7 +23,7 @@
         <!-- Bootstrap Dependencies -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <!-- Bootstrap JS -->
-        <script src="bootstrap/js/bootstrap.min.css" type="text/javascript"></script> 
+        <script src="bootstrap/js/bootstrap.min.css" type="text/javascript"></script>
 
     </footer>
 </html>

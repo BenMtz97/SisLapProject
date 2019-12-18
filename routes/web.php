@@ -17,7 +17,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/equipment/search', 'EquipmentController@search')->name('equipment');
 Route::get('/equipment/details/{id}', 'EquipmentController@details')->name('details');
 Route::post('/equipment/search', 'EquipmentController@search')->name('equipment');
-Route::get('/loans/search', 'LoansController@search')->name('equipment');
+Route::get('/loans/search', 'LoansController@search')->name('loans');
 Route::get('/loans', 'LoansController@index')->name('loans');
 
 Auth::routes();

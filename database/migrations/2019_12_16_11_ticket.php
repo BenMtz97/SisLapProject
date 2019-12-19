@@ -15,9 +15,9 @@ class Ticket extends Migration
     {
         Schema::create('ticket', function (Blueprint $table) {
             //Table Fields
-            $table->bigIncrements('ticket_id')->primary();
-            $table->integer('user_id');
-            $table->integer('equipment_id');
+            $table->unsignedInteger('ticket_id')->autoIncrement();
+            $table->unsignedInteger('user_id');
+            $table->unsignedInteger('equipment_id');
             $table->string('comment',150);
             $table->boolean('status'); //0 Open - 1 On revision - 2 Closed
             $table->timestamps();

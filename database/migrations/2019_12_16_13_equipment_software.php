@@ -15,9 +15,9 @@ class EquipmentSoftware extends Migration
     {
         Schema::create('equipment_software', function (Blueprint $table) {
             //Table Fields
-            $table->bigIncrements('equipment_software_id')->primary();
-            $table->integer('equipment_id');
-            $table->integer('software_id');
+            $table->unsignedInteger('equipment_software_id')->autoIncrement();
+            $table->unsignedInteger('equipment_id');
+            $table->unsignedInteger('software_id');
 
             // Foreign Keys
             $table->unique(['equipment_id', 'software_id']);

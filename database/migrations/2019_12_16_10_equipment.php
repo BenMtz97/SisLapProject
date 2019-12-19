@@ -15,14 +15,14 @@ class Equipment extends Migration
     {
         Schema::create('equipment', function (Blueprint $table) {
             //Table Fields
-            $table->bigIncrements('equipment_id')->primary();
+            $table->unsignedInteger('equipment_id')->autoIncrement();
             $table->string('name',50);
-            $table->integer('brand_id');
+            $table->unsignedInteger('brand_id');
             $table->string('model',50);
             $table->string('serial_number', 50);
             $table->string('mac_address',17);
-            $table->integer('os_id');
-            $table->integer('build_id');
+            $table->unsignedInteger('os_id');
+            $table->unsignedInteger('build_id');
             $table->integer('status')->default(1); //0 Unavailable - 1 Available - 2 On Maintenance
             $table->timestamps();
 

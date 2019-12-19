@@ -15,7 +15,7 @@ class CatType extends Migration
     {
         Schema::create('cat_type', function (Blueprint $table) {
             //Table Fields
-            $table->bigIncrements('type_id')->primary();
+            $table->unsignedInteger('type_id')->autoIncrement();
             $table->string('name',50);
         });
     }

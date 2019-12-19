@@ -15,7 +15,7 @@ class CatModality extends Migration
     {
         Schema::create('cat_modality', function (Blueprint $table) {
             //Table Fields
-            $table->bigIncrements('modality_id')->primary();
+            $table->unsignedInteger('modality_id')->autoIncrement();
             $table->string('name',50);
         });
     }

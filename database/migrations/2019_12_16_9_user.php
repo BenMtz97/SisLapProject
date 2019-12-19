@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersTable extends Migration
+class User extends Migration
 {
     /**
      * Run the migrations.
@@ -15,15 +15,15 @@ class CreateUsersTable extends Migration
     {
         Schema::create('user', function (Blueprint $table) {
             //Table Fields
-            $table->bigIncrements('user_id')->primary();
+            $table->unsignedInteger('user_id')->autoIncrement();
             $table->string('name',50);
             $table->string('first_last_name',50);
             $table->string('second_last_name',50)->nullable();
-            $table->integer('modality_id');
-            $table->integer('type_id');
+            $table->unsignedInteger('modality_id');
+            $table->unsignedInteger('type_id');
             $table->string('group',2);
-            $table->integer('career_id');
-            $table->integer('position_id');
+            $table->unsignedInteger('career_id');
+            $table->unsignedInteger('position_id');
             $table->string('password',60);
             $table->boolean('status')->default(true); //false Inactive - true Active
             $table->string('email')->unique();

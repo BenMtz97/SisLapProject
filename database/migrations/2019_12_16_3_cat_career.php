@@ -15,7 +15,7 @@ class CatCareer extends Migration
     {
         Schema::create('cat_career', function (Blueprint $table) {
             //Table Fields
-            $table->bigIncrements('career_id')->primary();
+            $table->unsignedInteger('career_id')->autoIncrement();
             $table->string('name',100);
         });
     }

@@ -15,7 +15,7 @@ class CatBrand extends Migration
     {
         Schema::create('cat_brand', function (Blueprint $table) {
             //Table Fields
-            $table->bigIncrements('brand_id')->primary();
+            $table->unsignedInteger('brand_id')->autoIncrement();
             $table->string('name', 50);
         });
     }

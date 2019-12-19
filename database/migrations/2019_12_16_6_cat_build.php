@@ -15,7 +15,7 @@ class CatBuild extends Migration
     {
         Schema::create('cat_build', function (Blueprint $table) {
             //Table Fields
-            $table->bigIncrements('build_id')->primary();
+            $table->unsignedInteger('build_id')->autoIncrement();
             $table->string('name', 50);
         });
     }

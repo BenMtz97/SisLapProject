@@ -15,7 +15,7 @@ class CatSoftware extends Migration
     {
         Schema::create('cat_software', function (Blueprint $table) {
             //Table Fields
-            $table->bigIncrements('software_id')->primary();
+            $table->unsignedInteger('software_id')->autoIncrement();
             $table->string('name', 50);
             $table->string('version', 15);
         });

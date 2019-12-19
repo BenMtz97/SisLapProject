@@ -15,7 +15,7 @@ class CatPosition extends Migration
     {
         Schema::create('cat_position', function (Blueprint $table) {
             //Table Fields
-            $table->bigIncrements('position_id')->primary();
+            $table->unsignedInteger('position_id')->autoIncrement();
             $table->string('name',100);
         });
     }

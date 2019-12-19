@@ -15,9 +15,9 @@ class Loan extends Migration
     {
         Schema::create('loan', function (Blueprint $table) {
             //Table Fields
-            $table->bigIncrements('loan_id')->primary();
-            $table->integer('equipment_id');
-            $table->integer('user_id');
+            $table->unsignedInteger('loan_id')->autoIncrement();
+            $table->unsignedInteger('equipment_id');
+            $table->unsignedInteger('user_id');
             $table->boolean('status')->default(true);
             $table->timestamps();
         });

@@ -15,7 +15,7 @@ class CatOs extends Migration
     {
         Schema::create('cat_os', function (Blueprint $table) {
             //Table Fields
-            $table->bigIncrements('os_id')->primary();
+            $table->unsignedInteger('os_id')->autoIncrement();
             $table->string('name', 50);
             $table->string('edition', 50);
         });
